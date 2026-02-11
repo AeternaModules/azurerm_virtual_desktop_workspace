@@ -18,7 +18,7 @@ EOT
     resource_group_name           = string
     description                   = optional(string)
     friendly_name                 = optional(string)
-    public_network_access_enabled = optional(bool, true)
+    public_network_access_enabled = optional(bool) # Default: true
     tags                          = optional(map(string))
   }))
 }
