@@ -1,3 +1,7 @@
+output "virtual_desktop_workspaces_id" {
+  description = "Map of id values across all virtual_desktop_workspaces, keyed the same as var.virtual_desktop_workspaces"
+  value       = { for k, v in azurerm_virtual_desktop_workspace.virtual_desktop_workspaces : k => v.id }
+}
 output "virtual_desktop_workspaces_description" {
   description = "Map of description values across all virtual_desktop_workspaces, keyed the same as var.virtual_desktop_workspaces"
   value       = { for k, v in azurerm_virtual_desktop_workspace.virtual_desktop_workspaces : k => v.description }
